@@ -4,7 +4,7 @@ class Pokemon():
   def __init__(self):
     self.lvl = 5
     self.base = {
-      'hp': 39, 'atk': 52, 'def': 43, 'spa': 60, 'spd': 50, 'spe': 65,        # For testing purposes I chose the stats of a glumanda
+      'hp': 39, 'atk': 52, 'def': 43, 'spa': 60, 'spd': 50, 'spe': 65,        # For testing purposes I chose the stats of a charmander
     }                                                                         # use normed values later
     self.IV = {
       'hp': 0, 'atk': 0, 'def': 0, 'spa': 0, 'spd': 0, 'spe': 0, 
