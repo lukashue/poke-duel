@@ -4,5 +4,5 @@ For practicing Git and GitHub, we decided to create our own little Pokemon ripof
 
 ## Created by
 
-Christoph Held
+Christoph Held\
 Lukas Hültenschmidt
