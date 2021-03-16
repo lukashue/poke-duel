@@ -34,5 +34,5 @@ show public key with cat _keyname_.pub
 ---
 
 add key to ssh-agent:
-eval "sh-agent" -s"
-ssh-add _keyname_
+eval "$(ssh-agent -s)"
+ssh-add ~/.ssh/_keyname_
