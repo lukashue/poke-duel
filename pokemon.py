@@ -27,7 +27,7 @@ class Pokemon():
     }
     self.nature = "hardy"   # may be randomized later
     #self.item = None
-    #self.attacks = [None, None, None, None]
+    self.moves = [None, None, None, None]
     
   def max(self, stat):
     if stat=='hp':
@@ -37,20 +37,21 @@ class Pokemon():
 
 
 # ------------TEST AREA-----------------
+if __name__=="__main__":
+  cha = Pokemon("charmAnder")
+  squ = Pokemon("Squirtle")
+  bul = Pokemon("Bulbasaur")
+  print("At level 100, with zero IV/EV and neutral nature, the stats are:")
+  for poke in [cha, squ, bul]:
+    print(f'{poke.name}:')
+    poke.lvl = 100
+    for stat in ["hp","atk","def","spa","spd","spe"]:
+      print(stat, poke.max(stat), end="\t")
+    print()
 
-cha = Pokemon("charmAnder")
-squ = Pokemon("Squirtle")
-print("At level 100, with zero IV/EV and neutral nature, the stats are:")
-for poke in [cha, squ]:
-  print(f'{poke.name}:')
-  poke.lvl = 100
+  print('For Comparison:')
+  squ.nature = "lonely"
+  print('Squirtle (with lonely nature):')
   for stat in ["hp","atk","def","spa","spd","spe"]:
-    print(stat, poke.max(stat), end="\t")
-  print()
-
-print('For Comparison:')
-squ.nature = "lonely"
-print('Squirtle (with lonely nature):')
-for stat in ["hp","atk","def","spa","spd","spe"]:
-    print(stat, squ.max(stat), end="\t")
+      print(stat, squ.max(stat), end="\t")
 

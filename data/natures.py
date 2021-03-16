@@ -1,4 +1,5 @@
 import json
+import sys
 
 # This script serves as a generator for the corresponding JSON file
 # I use it because some huge changes in the JSON file can be easily generated in here
@@ -32,6 +33,6 @@ nature_coefficients = {
   "quirky": {'hp': 1, 'atk': 1, 'def': 1, 'spa': 1, 'spd': 1, 'spe': 1}
 }
 
-with open('natures.json', "w") as file:
+with open(f'{sys.path[0]}/natures.json', "w") as file:
   json.dump(nature_coefficients, file, indent=2)
 
