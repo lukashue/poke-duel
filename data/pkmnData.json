@@ -9,7 +9,7 @@
       "spe": 65
     },
     "type": [
-      "Fire",
+      "fire",
       null
     ],
     "learnset": {
@@ -27,12 +27,30 @@
       "spe": 43
     },
     "type": [
-      "Water",
+      "water",
       null
     ],
     "learnset": {
       "tackle": 1,
-      "water_gun": 4
+      "water_gun": 3
+    }
+  },
+  "bulbasaur": {
+    "base_stats": {
+      "hp": 45,
+      "atk": 49,
+      "def": 49,
+      "spa": 65,
+      "spd": 65,
+      "spe": 45
+    },
+    "type": [
+      "grass",
+      "poison"
+    ],
+    "learnset": {
+      "tackle": 1,
+      "vine_whip": 3
     }
   }
 }

@@ -40,8 +40,9 @@ class Pokemon():
 
 cha = Pokemon("charmAnder")
 squ = Pokemon("Squirtle")
+bul = Pokemon("Bulbasaur")
 print("At level 100, with zero IV/EV and neutral nature, the stats are:")
-for poke in [cha, squ]:
+for poke in [cha, squ, bul]:
   print(f'{poke.name}:')
   poke.lvl = 100
   for stat in ["hp","atk","def","spa","spd","spe"]:
