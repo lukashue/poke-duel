@@ -1,23 +1,24 @@
 import math
 import json
+import sys
 
 # imports the base stats of all implemented pokemon
-with open('base_stats.json') as base_stats_file:
-  base_stats = json.loads(base_stats_file.read())
+with open(f'{sys.path[0]}/data/pkmnData.json') as pkmnData_file:
+  pkmnData = json.loads(pkmnData_file.read())
 
 # imports the nature coefficients
-with open('natures.json') as nature_file:
+with open(f'{sys.path[0]}/data/natures.json') as nature_file:
   nature_coeffs = json.loads(nature_file.read())
 
-# Creating an instance of this class will create an error because I didn´t define base stats for an arbitrary pokemon
-# This class only serves as a template for its child classes
+
 class Pokemon():
-  def __init__(self):
-    self.name = self.__class__.__name__ 
-    self.nickname = self.__class__.__name__ 
-    self.type = [None, None]
+  def __init__(self, species):
+    self.name = species.capitalize()
+    #self.nickname = species.capitalize() 
+    species = species.lower()
+    #self.type = pkmnData[species]["type"]
     self.lvl = 5
-    self.base = base_stats[self.__class__.__name__]
+    self.base = pkmnData[species]["base_stats"]
     self.IV = {
       'hp': 0, 'atk': 0, 'def': 0, 'spa': 0, 'spd': 0, 'spe': 0, 
     }
@@ -25,27 +26,20 @@ class Pokemon():
       'hp': 0, 'atk': 0, 'def': 0, 'spa': 0, 'spd': 0, 'spe': 0, 
     }
     self.nature = "hardy"   # may be randomized later
+    #self.item = None
+    #self.attacks = [None, None, None, None]
     
   def max(self, stat):
     if stat=='hp':
       return math.floor(0.01*(2*self.base['hp'] + self.IV['hp'] + math.floor(0.25*self.EV['hp']))*self.lvl) + self.lvl + 10
     else:
       return math.floor(math.floor((0.01*(2*self.base[stat] + self.IV[stat] + math.floor(0.25*self.EV[stat]))*self.lvl) + 5)*nature_coeffs[self.nature][stat])
-      # need to multiply with nature coefficient once implemented
 
-
-class Charmander(Pokemon):
-  def __init__(self):
-    super().__init__()
-
-class Squirtle(Pokemon):
-  def __init__(self):
-    super().__init__()
 
 # ------------TEST AREA-----------------
 
-cha = Charmander()
-squ = Squirtle()
+cha = Pokemon("charmAnder")
+squ = Pokemon("Squirtle")
 print("At level 100, with zero IV/EV and neutral nature, the stats are:")
 for poke in [cha, squ]:
   print(f'{poke.name}:')
