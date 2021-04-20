@@ -13,7 +13,8 @@ pkmnData = {
     "type": ["fire", None],
     "learnset": {
       'scratch': 1, 'ember': 4 
-    }   
+    },
+    "no": "004"
   },
   "squirtle": {
     "base_stats": {
@@ -22,7 +23,8 @@ pkmnData = {
     "type": ["water", None],
     "learnset": {
       'tackle': 1, 'water_gun': 3
-    }   
+    },
+    "no": "007"   
   },
   "bulbasaur": {
     "base_stats": {
@@ -31,7 +33,8 @@ pkmnData = {
     "type": ["grass", "poison"],
     "learnset": {
       'tackle': 1, 'vine_whip': 3
-    }   
+    },
+    "no": "001"  
   }
 }
 

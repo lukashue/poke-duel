@@ -15,7 +15,8 @@
     "learnset": {
       "scratch": 1,
       "ember": 4
-    }
+    },
+    "no": "004"
   },
   "squirtle": {
     "base_stats": {
@@ -33,7 +34,8 @@
     "learnset": {
       "tackle": 1,
       "water_gun": 3
-    }
+    },
+    "no": "007"
   },
   "bulbasaur": {
     "base_stats": {
@@ -51,6 +53,7 @@
     "learnset": {
       "tackle": 1,
       "vine_whip": 3
-    }
+    },
+    "no": "001"
   }
 }
