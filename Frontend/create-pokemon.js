@@ -29,6 +29,7 @@ pkmnSelector.onchange = function () {
     .then((data) => {
       let [primary, secondary] = data[pkmn].type;
       let imgURL = imgBaseURL + stripLeftZeroes(data[pkmn].no) + ".png";
+      console.log(secondary);
 
       pkmnImg.src = imgURL;
 
@@ -38,8 +39,8 @@ pkmnSelector.onchange = function () {
         type2.innerText = capitalize(secondary);
         type2.setAttribute("class", secondary);
       } else {
+        type2.innerText = "";
         type2.setAttribute("class", "hidden");
-        type1.classList.add("single-type");
       }
     });
 };

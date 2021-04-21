@@ -8,10 +8,7 @@
       "spd": 50,
       "spe": 65
     },
-    "type": [
-      "fire",
-      null
-    ],
+    "type": ["fire", null],
     "learnset": {
       "scratch": 1,
       "ember": 4
@@ -27,10 +24,7 @@
       "spd": 64,
       "spe": 43
     },
-    "type": [
-      "water",
-      null
-    ],
+    "type": ["water", null],
     "learnset": {
       "tackle": 1,
       "water_gun": 3
@@ -46,10 +40,7 @@
       "spd": 65,
       "spe": 45
     },
-    "type": [
-      "grass",
-      "poison"
-    ],
+    "type": ["grass", "poison"],
     "learnset": {
       "tackle": 1,
       "vine_whip": 3
