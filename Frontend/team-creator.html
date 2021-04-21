@@ -32,12 +32,13 @@
       </select>
       <label for="new-team">or create a </label>
       <button id="new-team">New team</button>
-      <form action="" id="team">
+      <form action="#" id="team">
+        <!-- we may use REACT here in the future -->
         <div class="create-pokemon show-details-1">
           <header class="pokemon-overview">
             <img id="pkmn-img" src="" alt="" />
             <div class="name-type">
-              <select name="" id="pkmn-selector">
+              <select name="" class="pkmn-selector">
                 <option value="" selected disabled>-- Select Pokemon --</option>
                 <option value="bulbasaur">Bulbasaur</option>
                 <option value="charmander">Charmander</option>
@@ -52,13 +53,13 @@
               <label for="level" class="range-label">Level: </label>
               <input
                 type="range"
-                id="levelRange"
+                class="levelRange"
                 min="1"
                 max="100"
                 value="50"
               />
               <input
-                id="levelCount"
+                class="levelCount"
                 type="number"
                 min="1"
                 max="100"
@@ -82,7 +83,55 @@
           <div class="pokemon-moves shown"></div>
           <div class="pokemon-data shown"></div>
         </div>
-        <div class="create-pokemon show-details-2">2</div>
+        <div class="create-pokemon show-details-1">
+          <header class="pokemon-overview">
+            <img id="pkmn-img" src="" alt="" />
+            <div class="name-type">
+              <select name="" class="pkmn-selector">
+                <option value="" selected disabled>-- Select Pokemon --</option>
+                <option value="bulbasaur">Bulbasaur</option>
+                <option value="charmander">Charmander</option>
+                <option value="squirtle">Squirtle</option>
+              </select>
+              <span id="types">
+                <span id="type1" class="hidden"></span>
+                <span id="type2" class="hidden"></span>
+              </span>
+            </div>
+            <div>
+              <label for="level" class="range-label">Level: </label>
+              <input
+                type="range"
+                class="levelRange"
+                min="1"
+                max="100"
+                value="50"
+              />
+              <input
+                class="levelCount"
+                type="number"
+                min="1"
+                max="100"
+                value="50"
+                placeholder="1-100"
+              />
+            </div>
+            <span> Enter description here. </span>
+            <div>
+              <select name="">
+                <option value="" selected disabled>-- Select Ability --</option>
+                <option value="blaze">Blaze</option>
+                <option value="solar-power">Solar Power</option>
+              </select>
+              <select name="">
+                <option value="" selected disabled>-- Select Item --</option>
+                <option value="master-ball">Nothing</option>
+              </select>
+            </div>
+          </header>
+          <div class="pokemon-moves shown"></div>
+          <div class="pokemon-data shown"></div>
+        </div>
         <div class="create-pokemon show-details-3">3</div>
         <div class="create-pokemon show-details-4">4</div>
         <div class="create-pokemon show-details-5">5</div>
