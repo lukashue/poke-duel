@@ -1,7 +1,6 @@
 const imgBaseURL =
   "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/";
 
-const pkmnImg = document.querySelector("#pkmn-img");
 const pkmnSelectors = document.querySelectorAll(".pkmn-selector");
 const type1 = document.querySelector("#type1");
 const type2 = document.querySelector("#type2");
@@ -37,21 +36,22 @@ for (pkmnSelector of pkmnSelectors) {
         let [primary, secondary] = data[pkmn].type;
         let imgURL = imgBaseURL + stripLeftZeroes(data[pkmn].no) + ".png";
 
-        let siblings = this.parentElement.parentElement.children;
-        let pkmnImg = siblings[0];
-        let type1 = siblings[1].children[1].children[0];
-        let type2 = siblings[1].children[1].children[1];
+        let header = this.parentElement.parentElement;
 
+        let pkmnImg = header.querySelector(".pkmn-img");
         pkmnImg.src = imgURL;
 
+        let typeSpans = header.querySelectorAll(".type");
+        let type1 = typeSpans[0];
+        let type2 = typeSpans[1];
         type1.innerText = capitalize(primary);
-        type1.setAttribute("class", primary);
+        type1.setAttribute("class", "type " + primary);
         if (secondary) {
           type2.innerText = capitalize(secondary);
-          type2.setAttribute("class", secondary);
+          type2.setAttribute("class", "type " + secondary);
         } else {
           type2.innerText = "";
-          type2.setAttribute("class", "hidden");
+          type2.setAttribute("class", "type hidden");
         }
       });
   };
